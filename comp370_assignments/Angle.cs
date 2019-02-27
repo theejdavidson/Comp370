@@ -36,7 +36,9 @@ public struct Angle
     }
     public Angle(int deg, int min) { this = new Angle(deg, min, 0); }
 
-    public Angle(int deg) { this = new Angle(deg, 0, 0); } //Added line: Allows for input of a standalone degree
+    //Added line: Allows for input of a standalone degree
+
+    public Angle(int deg) { this = new Angle(deg, 0, 0); }
 
 
     //  Accessors
@@ -84,8 +86,8 @@ public struct Angle
     {
         char degreeSymbol = (char)176;
         return (value < 0 ? "-" : "")
-             + Math.Abs(Degrees()) + degreeSymbol//Bug(?) Fix: Degrees, Minutes, Seconds needed to be capitalized to run program
-             + Math.Abs(Minutes()) + '\''
+             + Math.Abs(Degrees()) + degreeSymbol//Bug(?) Fix: Degrees, Minutes,
+             + Math.Abs(Minutes()) + '\'' //Seconds needed to be capitalized to run program
              + Math.Abs(Seconds()) + '\"';
     }
 
@@ -145,12 +147,7 @@ public struct Angle
         Console.WriteLine(q / p);
     }
 
-    //public Boolean ToDegreesTest(Angle inputInRadians, Angle outputInRadians)
-    //{
-    //    return true;
-    //}
-
-    //Methods to test: toDegrees, toRadians, 
+    //Methods to test: toDegrees, toRadians, base and arc methods
     //ToDo: find way to cache Degrees, Minutes, Seconds
     //Test all operators
 }
