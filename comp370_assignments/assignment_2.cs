@@ -4,7 +4,7 @@
 //  This value class supports operations on plane angles.
 
 using System;
-
+using
 public struct Angle
 {
     double value;                 //  normalized radians

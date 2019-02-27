@@ -1,4 +1,4 @@
-﻿//  Integer functions of two integer parameters
+//  Integer functions of two integer parameters
 //  -------------------------------------------
 //  (for COMP 370)
 /*
@@ -24,7 +24,7 @@ public class intfuncB
     {
         long[,] testCases = new long[6, 2] { { 1, 2 }, { -1, -5 }, { 0, 10}, { 5, 15 }, { 50, 30}, { 50000, 60000} };
         long[,] expectedResults = new long[6, 2] { { 1, 2 }, { -1, -5 }, { 10, 0 }, { 5, 15 }, { 10, 150}, { 10000, 300000} };
-    
+    ;xzlckgvjasd;lkfjsadl;kj
         for(int i = 0; i<testCases.GetLength(0); i++)
         {
             long j = testCases[i, 0];
