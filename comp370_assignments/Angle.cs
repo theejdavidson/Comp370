@@ -141,6 +141,8 @@ public struct Angle
         Console.WriteLine(p * 3);
         Console.WriteLine(p.Sin());
         Console.WriteLine(q / p);
+        Console.WriteLine(Angle.Arccos(90));
+        
 
     }
 
