@@ -30,11 +30,13 @@ public struct Angle
                       int min, //    (Signs should agree
                       int sec) //       for conventional notation.)
     {
-        double seconds = sec + 60 * (min + 60 * deg);//Delivers unexpected result
-        value = seconds * Math.PI / 648000.0;//TODO: figure out what would correct
+        double seconds = sec + 60 * (min + 60 * deg);
+        value = seconds * Math.PI / 648000.0;
         Normalize();
     }
     public Angle(int deg, int min) { this = new Angle(deg, min, 0); }
+
+    public Angle(int deg) { this = new Angle(deg, 0, 0); } //Added line: Allows for input of a standalone degree
 
 
     //  Accessors
@@ -82,7 +84,7 @@ public struct Angle
     {
         char degreeSymbol = (char)176;
         return (value < 0 ? "-" : "")
-             + Math.Abs(Degrees()) + degreeSymbol
+             + Math.Abs(Degrees()) + degreeSymbol//Bug(?) Fix: Degrees, Minutes, Seconds needed to be capitalized to run program
              + Math.Abs(Minutes()) + '\''
              + Math.Abs(Seconds()) + '\"';
     }
@@ -141,9 +143,6 @@ public struct Angle
         Console.WriteLine(p * 3);
         Console.WriteLine(p.Sin());
         Console.WriteLine(q / p);
-        Console.WriteLine(Angle.Arccos(90));
-        
-
     }
 
     //public Boolean ToDegreesTest(Angle inputInRadians, Angle outputInRadians)
