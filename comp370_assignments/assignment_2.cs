@@ -1,11 +1,11 @@
-﻿//<pre>
+//<pre>
 //Angle class   --   copyright 2001, 2014 Information Disciplines, Inc.
 
 //  This value class supports operations on plane angles.
 
 using System;
 
-public override struct Angle
+public struct Angle
 {
     double value;                 //  normalized radians
 
@@ -145,9 +145,12 @@ public override struct Angle
 
     }
 
+    //public Boolean ToDegreesTest(Angle inputInRadians, Angle outputInRadians)
+    //{
+    //    return true;
+    //}
 
-
-
-
-
+    //Methods to test: toDegrees, toRadians, 
+    //ToDo: find way to cache Degrees, Minutes, Seconds
+    //Test all operators
 }
