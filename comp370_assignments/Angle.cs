@@ -4,7 +4,6 @@
 //  This value class supports operations on plane angles.
 
 using System;
-using
 public struct Angle
 {
     double value;                 //  normalized radians
@@ -31,8 +30,8 @@ public struct Angle
                       int min, //    (Signs should agree
                       int sec) //       for conventional notation.)
     {
-        double seconds = sec + 60 * (min + 60 * deg);
-        value = seconds * Math.PI / 648000.0;
+        double seconds = sec + 60 * (min + 60 * deg);//Delivers unexpected result
+        value = seconds * Math.PI / 648000.0;//TODO: figure out what would correct
         Normalize();
     }
     public Angle(int deg, int min) { this = new Angle(deg, min, 0); }

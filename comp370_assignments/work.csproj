@@ -84,9 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="assignment_1A.cs" />
-    <Compile Include="assignment_1B.cs" />
-    <Compile Include="assignment_2.cs" />
+    <Compile Include="Angle.cs" />
     <Compile Include="NUnitTestClass.cs" />
   </ItemGroup>
   <ItemGroup>
