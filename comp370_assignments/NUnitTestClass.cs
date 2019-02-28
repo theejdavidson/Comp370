@@ -51,5 +51,12 @@ namespace comp370_assignments
         {
             //Assert.AreEqual()
         }
+        [Test()]
+        public void TestNormalize()
+        {
+            Assert.AreEqual(new Angle(4 * Math.PI), new Angle(0));
+            Assert.AreEqual(new Angle(5 * Math.PI), new Angle(Math.PI));
+            Assert.AreEqual(new Angle(-4 * Math.PI), new Angle(0));
+        }
     }
 }

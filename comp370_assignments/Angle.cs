@@ -36,7 +36,7 @@ public struct Angle
     }
     public Angle(int deg, int min) { this = new Angle(deg, min, 0); }
 
-    //Added line: Allows for input of a standalone degree
+    //Added line: Allows for input of a standalone degree as integer
 
     public Angle(int deg) { this = new Angle(deg, 0, 0); }
 
