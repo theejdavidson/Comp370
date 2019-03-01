@@ -25,14 +25,14 @@ namespace comp370_assignments
         [Test()]
         public void TestBasics()
         {
-            Angle a = new Angle(90);
-
-            Assert.AreEqual(new Angle(0).Cos(), 1);
-            Assert.AreEqual(new Angle(0).Sin(), 0);
-            Assert.AreEqual(new Angle(0).Tan(), 0);
+            Assert.AreEqual(new Angle(0).Cos(), 1.0);
+            Assert.AreEqual(new Angle(0).Sin(), 0.0);
+            Assert.AreEqual(new Angle(0).Tan(), 0.0);
             Assert.Less(Math.Abs(new Angle(90).Cos() - 0.0), 0.000001);
             Assert.AreEqual(new Angle(90).Sin(), 1);
             Assert.Less(Math.Abs(new Angle(45).Tan() - 1.0), 0.000001);
+
+            Angle a = new Angle(90);
 
             //Testing important trig identities, tan(theta)=sin(theta)/cos(theta)
             //cos^2(theta)+sin^2(theta)= 1
@@ -44,12 +44,15 @@ namespace comp370_assignments
         {
             Assert.AreEqual(Angle.Arccos(.5), new Angle(60));
             Assert.AreEqual(Angle.Arcsin(.5), new Angle(30));
-            Assert.AreEqual(Angle.Arctan(1), new Angle(45));
+            Assert.AreEqual(Angle.Arctan(1.0), new Angle(45));
         }
         [Test()]
         public void TestOperands()
         {
             //Assert.AreEqual()
+            Angle a = new Angle(45);
+
+
         }
         [Test()]
         public void TestNormalize()
@@ -57,6 +60,7 @@ namespace comp370_assignments
             Assert.AreEqual(new Angle(4 * Math.PI), new Angle(0));
             Assert.AreEqual(new Angle(5 * Math.PI), new Angle(Math.PI));
             Assert.AreEqual(new Angle(-4 * Math.PI), new Angle(0));
+            Assert.AreEqual(new Angle(5000 * Math.PI), new Angle(0));
         }
     }
 }

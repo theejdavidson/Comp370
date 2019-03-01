@@ -14,9 +14,18 @@ public struct Angle
 
     void Normalize()
     {
+        /*
         double twoPi = Math.PI + Math.PI;
         while (value <= -Math.PI) value += twoPi;
         while (value > Math.PI) value -= twoPi;
+        //looping causes fault tolerance, should change it to calculate a single time with % remainder
+        */
+
+        double twoPi = Math.PI + Math.PI;
+        // if (value <= -Math.PI) value %= twoPi;
+        //if (value > Math.PI) value %= twoPi;
+        value %= twoPi;
+
     }
 
 
